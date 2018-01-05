@@ -81,13 +81,20 @@ mysql> show grants for guess@localhost;
 ![](../../image/mysql-02.png)
 
 ### 管理命令
-* 列出所有数据库列表 `SHOW DATABASES;`:
-![](img/mysql-03)
-* 列出所有数据列表 `SHOW TABLES;`:
-![](img/mysql-04)
-* 显示数据表信息 `SHOW COLUMNS FROM test;`:
-![](img/mysql-05)
-* 显示数据表中的所有主键 `SHOW INDEX FROM test;`:
-![](img/mysql-06)
-* 显示数据表中的所有主键 `SHOW TABLE STATUS FROM test;`:
-![](img/mysql-07)
+
+* 列出所有数据库列表 `SHOW DATABASES;`: <br/>
+<br/>
+![](../../image/mysql-03.png)
+<br/>
+* 列出所有数据列表 `SHOW TABLES;`: <br/>
+<br>
+![](../../image/mysql-04.png)
+<br/>
+* 显示数据表信息 `SHOW COLUMNS FROM test;`: <br/>
+<br>
+![](../../image/mysql-05.png)
+<br/>
+* 显示数据表中的所有主键 `SHOW INDEX FROM test;`: <br/>
+<br>
+![](../../image/mysql-06.png)
+<br/>
