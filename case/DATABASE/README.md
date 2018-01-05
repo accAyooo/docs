@@ -36,8 +36,17 @@
 ```
 <br/>
 ## 运行mysql
-启动mysql服务
+### 启动mysql服务
 ```
 # service mysqld start
 # mysql
+```
+
+### 设置管理员密码
+```
+# mysqladmin -u root password "****"
+```
+管理员登陆
+```
+
 ```
