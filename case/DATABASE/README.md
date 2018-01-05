@@ -35,7 +35,7 @@
 # yum install mysql-server  
 ```
 <br/>
-## 运行mysql
+## 二、运行mysql
 ### 启动mysql服务
 ```
 # service mysqld start
@@ -48,5 +48,46 @@
 ```
 管理员登陆
 ```
-
+mysql -u root -p
+Enter password: ****
 ```
+<br/>
+## 三、管理mysql数据库
+### 创建新的Database
+```
+mysql> create database test;
+```
+### 创建新的管理员
+1. 创建新用户`guess`：
+```
+mysql> create user guess;
+```
+1. 给`guess`设置password, 使用 `flush privileges` 命令使生效;
+> mysql 新设置用户或更改密码后需用flush privileges刷新MySQL的系统权限相关表，否则会出现拒绝访问，还有一种方法，就是重新启动mysql服务器，来使新设置生效。
+
+  ```
+  mysql> update user set password=password('****') where user='guess';
+  mysql> flush privileges;
+  ```
+1. 赋予权限
+```
+mysql> grant all on test.* to 'guess'@'localhost' ;
+mysql> flush privileges;
+```
+1. 查询权限
+```
+mysql> show grants for guess@localhost;
+```
+![](../../image/mysql-02.png)
+
+### 管理命令
+* 列出所有数据库列表 `SHOW DATABASES;`:
+![](img/mysql-03)
+* 列出所有数据列表 `SHOW TABLES;`:
+![](img/mysql-04)
+* 显示数据表信息 `SHOW COLUMNS FROM test;`:
+![](img/mysql-05)
+* 显示数据表中的所有主键 `SHOW INDEX FROM test;`:
+![](img/mysql-06)
+* 显示数据表中的所有主键 `SHOW TABLE STATUS FROM test;`:
+![](img/mysql-07)
